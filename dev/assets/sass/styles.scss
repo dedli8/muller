@@ -1,0 +1,10 @@
+@import 'settings';
+@import 'mixins';
+@import "fonts";
+@import 'reset';
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+@import "../../components/header/__header";
+
