@@ -1,0 +1,62 @@
+.footer{
+  padding: 25px 35px;
+  color: white;
+  background-color: #0070af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  @include media($width-xs){
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  @include media($width-sm){
+    padding: 25px 70px;
+  }
+  .company-name{
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    @include media($width-xs){
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+  .contacts-block{
+    min-width: 250px;
+    font-size: 13px;
+    a {
+      display: block;
+      margin-bottom: 25px;
+      position: relative;
+      padding-left: 35px;
+      &:before {
+        content: '';
+        position: absolute;
+        background-size: cover;
+        left: 0;
+        top:-25%;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+      .phone:before{
+        left: 4px;
+        width: 14px;
+        height: 23px;
+        background-image: url("img/phone.svg");
+      }
+      .email:before{
+        width: 24px;
+        height: 16px;
+        background-image: url("img/mail.svg");
+      }
+      .address:before{
+        width: 24px;
+        height: 20px;
+        background-image: url("img/home.svg");
+      }
+  }
+}

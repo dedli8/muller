@@ -1,0 +1,47 @@
+.person-info{
+  padding: 25px 35px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  text-align: center;
+  @include media($width-xs){
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: 380px;
+    text-align: left;
+  }
+  @include media($width-sm){
+    padding: 40px 70px;
+  }
+  img{
+    height: auto;
+    width: 100%;
+    max-width: 315px;
+    margin-bottom: 20px;
+    @include media($width-xs){
+      width: 40%;
+      padding-top: 70px;
+      margin-right: 45px;
+      margin-bottom: 0;
+    }
+    @include media($width-sm){
+      margin-right: 90px;
+    }
+  }
+  .text-block {
+    color: black;
+    font-size: 16px;
+    line-height: 25px;
+    align-self: flex-start;
+    .person-info-title {
+      font-size: 28px;
+      margin-bottom: 38px;
+    }
+    .person-info-text{
+      text-align: left;
+      height: 315px;
+      overflow-y: auto;
+    }
+  }
+}

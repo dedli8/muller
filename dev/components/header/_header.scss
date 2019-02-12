@@ -1,0 +1,78 @@
+.header {
+  background-color: #0070af;
+  padding: 25px 35px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  @include media($width-sm){
+    display: block;
+    padding: 40px 70px 25px 70px;
+  }
+  .main-title {
+font-size: 20px;
+    @include media($width-sm){
+      margin-bottom: 45px;
+      font-size: 35px;
+    }
+  }
+  .nav-menu-wrap{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background: url("img/menu.svg") no-repeat;
+    cursor: pointer;
+    @include media($width-sm){
+      width: initial;
+      height: initial;
+      background: none;
+    }
+    &:hover .nav-menu{
+      display: block;
+      @include media($width-sm){
+        display: flex;
+      }
+    }
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #0070af;
+    top: 65px;
+    right: 0;
+@include media($width-xs){
+  width: 50%;
+}
+    @include media($width-sm){
+      width: initial;
+      position: static;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-item {
+      display: block;
+      padding-bottom: 5px;
+      border-bottom: 1px solid white;
+      text-align: center;
+      font-size: 30px;
+      @include media($width-sm){
+        border-bottom: 1px solid transparent;
+        padding-bottom: 10px;
+        display: initial;
+        font-size: 13px;
+      }
+      &:hover {
+        color: black;
+        @include media($width-sm) {
+          border-bottom-color: white;
+          color: white;
+        }
+      }
+    }
+  }
+}

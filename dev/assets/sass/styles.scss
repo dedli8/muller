@@ -2,9 +2,18 @@
 @import 'mixins';
 @import "fonts";
 @import 'reset';
+@import 'slick';
+@import 'slick-theme';
+body{
+  font-family: $freight, sans-serif;
+}
   .container {
     max-width: 1140px;
     margin: 0 auto;
   }
-@import "../../components/header/__header";
+@import "../../components/header/_header";
+@import "../../components/personinfo/personinfo";
+@import "../../components/slider/_slider";
+@import "../../components/preise/_preise";
+@import "../../components/footer/_footer";
 

@@ -1,0 +1,18 @@
+.preise{
+  img{
+    margin-right: 0;
+    margin-left: 0;
+    @include media($width-xs){
+      order: 2;
+      margin-left: 45px;
+    }
+    @include media($width-xs){
+      margin-left: 90px;
+    }
+  }
+  .text-block{
+    order: 2;
+    //@include media($width-xs){
+    //}
+  }
+}
